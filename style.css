@@ -1,0 +1,109 @@
+.container {
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.pumpkin{
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    border-radius:80px;
+    margin-top:25%;
+
+}
+.stem{
+    position :relative;
+    animation: shrink 1s infinite;
+    margin-top:-30px;
+    background-color:green;
+    width:30px;
+    height:50px;
+    border-radius:15px;
+}
+.pumpkin--eyes{
+    position :relative;
+    animation: laugh 1s infinite;
+    animation: shrink--eyes 1s infinite;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:10px;
+
+}
+
+.pumpkin--eye{
+    width: 0;
+    height: 0;
+    border-left:20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid yellow;
+}
+
+.pumpkin--center-container{
+    display:flex;
+    justify-content:center;
+}
+
+.pumpkin--nose{
+    position :relative;
+    animation: laugh 1s infinite;
+    width: 0;
+    height: 0;
+    border-left:20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid yellow;
+}
+
+.pumpkin--mouth-container{
+    display:grid;
+    grid-template-rows:1fr 1fr;
+}
+
+#mouth{
+    position :relative;
+    animation: laugh 1s infinite;
+    max-width:170px;
+    height:auto;
+    margin-left:15px;
+    margin-top:20px;
+}
+
+#cover{
+    margin-top:-50px;
+    animation: laugh 1s infinite;
+    max-height:19px;
+
+}
+
+@keyframes laugh {
+    0%   {top: 0px;}
+    50%  {top: -10px;}
+    100% {top: 0px;}
+}
+
+
+@keyframes shrink{
+    0% {padding-top:5px;}
+    25% {padding-top:0px;}
+    50% {padding-top:10px;}
+    75% {padding-top:0px;}
+    100% {padding-top:5px;}
+}
+
+@keyframes move{
+    0%   {padding-top: 0px;}
+    50%  {pading-top: -20px;}
+    100% {padding-top: 0px;}
+}
+
+@keyframes shrink--eyes{
+    0% {padding-top:5px;}
+    25% {padding-top:0px;}
+    50% {padding-top:10px;}
+    75% {padding-top:0px;}
+    100% {padding-top:5px;}
+}
